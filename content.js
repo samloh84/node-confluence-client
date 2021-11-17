@@ -95,7 +95,7 @@ module.exports = class ContentApi {
         }
         _.set(config, ['headers', 'content-type'], 'multipart/form-data');
         _.set(config, ['headers', 'X-Atlassian-Token'], 'nocheck');
-        return apiClient._post(['content', contentId, 'child', 'attachment', attachmentId], data, config);
+        return apiClient._post(['content', contentId, 'child', 'attachment', attachmentId,'data'], data, config);
     }
 
     listDescendants(contentId, params, config) {
